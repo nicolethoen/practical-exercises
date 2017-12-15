@@ -1,0 +1,133 @@
+body {
+	background: #bbb; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, #bbb, #ededed, #bbb); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, #bbb, #ededed, #bbb); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, #bbb, #ededed, #bbb); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, #bbb, #ededed, #bbb); /* Standard syntax */
+	
+	font-family: 'Overpass', sans-serif;
+}
+
+@media (min-width: 600px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
+.container {
+	background: white;
+	border: white solid 1px;
+	max-width: 550px;
+	margin: 0 auto;
+}
+
+/** header **/
+header {
+	background: #c00; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#c00, #7a0000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#c00, #7a0000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#c00, #7a0000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#c00, #7a0000); /* Standard syntax */
+}
+@media (min-width: 600px) {
+	header {
+	}
+}
+
+header .openShift {
+	font-weight: bold;
+	width: 10em;
+}
+
+@media (min-width: 600px) {
+	header .openShift {
+		float: left;
+	}
+}
+
+header div {
+	color: white;
+	height: 1.25em;
+	padding: 1em;
+}
+
+@media (min-width: 600px) {
+	header div {
+		display: inline-block;
+	}	
+	
+	header nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+header nav div.menuItem {
+	font-weight: 200;
+	border-top: 1px solid #efb2b2; 
+	cursor: pointer;
+}
+
+@media (min-width: 600px) {
+	header nav div.menuItem  {
+		border-left: 1px solid #efb2b2; 
+		border-top: 0;
+	}
+}
+
+header nav div:hover, header nav div:active {
+	background: #c00; /* For browsers that do not support gradients */
+    background: -webkit-radial-gradient(circle, #c00, #470000); /* For Safari 5.1 to 6.0 */
+    background: -o-radial-gradient(circle, #c00, #470000); /* For Opera 11.1 to 12.0 */
+    background: -moz-radial-gradient(circle, #c00, #470000); /* For Firefox 3.6 to 15 */
+    background: radial-gradient(circle, #c00, #470000); /* Standard syntax */
+}
+
+/** content **/
+.content {
+	padding: 1em;
+}
+
+.content .heading {
+	font-size: 1.4em;
+	font-weight: bold;
+	margin: .8em 0;
+}
+
+.content .topParagraph {
+	font-weight: bold;
+	margin: .8em 0;
+}
+
+.content .table .row {
+	margin: .4em 0;
+}
+
+.content .table .row .label {
+	font-weight: bold;
+}
+
+.content .table .row .information {
+	margin: .2em 0;
+}
+
+@media (min-width: 600px) {
+	.content .table .row {
+		margin: 1.25em 0;
+		display: flex;
+	}
+	
+	.content .table .row .label {
+		width: 10em;
+	}
+}
+
+.content span.status {
+	background: green;
+	color: white;
+	border-radius: .25em;
+	padding: .5em .5em .3em 0.5em;
+}
