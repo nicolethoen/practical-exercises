@@ -1,28 +1,23 @@
 function remoteMathService (cb) {
-	var one, two;
+	Promise.all([callOneService(), callTwoService()]).then( values => cb( undefined , values[0] + values[1]));
+}
+
+function callOneService () {
+	return new Promise(function(resolve,reject){
+		setTimeout ( function () {
+			resolve( 1 );
+		}, 1000 );
+	});
 	
-	callOneService( function (err, num) {
-		one = num;
-	});
-
-	callTwoService( function (err, num) {
-		two = num;
-	});
-
-	return cb( undefined , one + two);
-}
-
-function callOneService (cb) {
-	setTimeout ( function () {
-		return cb( undefined , 1 );
-	}, 1000 );
 }
 
 
-function callTwoService (cb) {
-	setTimeout ( function () {
-		return cb( undefined , 2 );
-	}, 1500 );
+function callTwoService () {
+	return new Promise(function(resolve,reject){
+		setTimeout ( function () {
+			resolve( 2 );
+		}, 1500 );
+	});
 }
 
 remoteMathService( function (err, answer) {
