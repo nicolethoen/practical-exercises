@@ -27,7 +27,7 @@ module.exports = (function() {
 	}
 
 	return {
-		remoteMathService : remoteMathService;
+		remoteMathService : remoteMathService
 	}
 
 }());

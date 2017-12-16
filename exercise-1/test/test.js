@@ -1,16 +1,35 @@
-var original = require('./exercise1-original.js'),
-	solution = require('./exercise1.js'),
+var original = require('../modularized-for-testing/original-module.js'),
+	solution = require('../modularized-for-testing/solution-module.js'),
 	assert = require('assert');
 	
-describe('exercise1-original', function() {
-	it('should return 3', function() {
-		e1_o.remoteMathService().should.eventually.equal(3);
+describe('original exercise', function() {
+	it('should fail to return 3', function() {
+		original.remoteMathService(function(err, answer) {
+
+			if (err) return false;
+
+			if (answer !== 3) {
+				return true;
+			} else {
+				return false;
+			}
+	
+		});
 	});
-	//https://mochajs.org/
 });
-describe('exercise1-solution', function() {
+
+describe('my solution', function() {
 	it('should return 3', function(){
-		return e1.remoteMathService().should.eventually.equal(3);
+		return solution.remoteMathService(function(err, answer) {
+
+			if (err) return false;
+
+			if (answer !== 3) {
+				return true;
+			} else {
+				return false;
+			}
+	
+		});
 	});
-	//https://www.npmjs.com/package/chai-as-promised
 });
