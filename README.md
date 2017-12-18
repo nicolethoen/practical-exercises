@@ -7,6 +7,6 @@
 * open OpenShift.html
 
 # exercise-3
-* is running online at
+* is not yet deployed...
 * can be run from command line by navigating into my app and running 'ng serve -o'
 * running 'npm test' will kick off my very small number of karma tests for the app. 
