@@ -5,31 +5,15 @@ var original = require('../modularized-for-testing/original-module.js'),
 describe('original exercise', function() {
 	it('should fail to return 3', function() {
 		original.remoteMathService(function(err, answer) {
-
-			if (err) return false;
-
-			if (answer !== 3) {
-				return true;
-			} else {
-				return false;
-			}
-	
+			assert.notEqual(answer, 3)
 		});
 	});
 });
 
 describe('my solution', function() {
 	it('should return 3', function(){
-		return solution.remoteMathService(function(err, answer) {
-
-			if (err) return false;
-
-			if (answer !== 3) {
-				return true;
-			} else {
-				return false;
-			}
-	
+		solution.remoteMathService(function(err, answer) {
+			assert.equal(answer, 3);
 		});
 	});
 });
